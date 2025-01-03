@@ -1,0 +1,1142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-style: shyam;
+}
+
+@font-face {
+    font-family: shyam;
+    src: url(./Fonts/plain-light-webfont.ttf);
+
+}
+
+@font-face {
+    font-family: china;
+    src: url(./Fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: japan;
+    src: url(./Fonts/silkserif-lightitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: usa;
+    src: url(./Fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* #crsr {
+    height: 2.3vw;
+    width: 2.3vw;
+    border-radius: 50%;
+    border: 2px solid rgb(221, 219, 219);
+    position: fixed;
+    z-index: 99;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+} */
+.mousefollower {
+    border: 2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale: 2;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+}
+/* #0B0B0B */
+#loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #0B0B0B;
+    padding: 20vh 8vw;
+}
+
+.line {
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+
+#line1-part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+#line1-part1 h5,
+#line1-part1 h6 {
+    font-size: 3.5vw;
+    font-weight: 300;
+    font-family: japan;
+}
+
+#line1-part1 h5 {
+    /* background-color: red; */
+    width: 5vw;
+    text-align: right;
+}
+
+.line h1 {
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: shyam;
+}
+
+.line h2 {
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: shyam;
+    opacity: 0;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime {
+    0% {
+        font-family: shyam;
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    47% {
+        font-family: shyam;
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+
+    50% {
+        font-family: japan;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    100% {
+        font-family: japan;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+#main {
+    position: relative;
+    background-color: #151515;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
+
+#page1 #nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.1vw 5.5vw;
+}
+
+#nav #nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+    font-size: 1vw;
+    font-weight: 100;
+    font-family: shyam;
+}
+
+
+.hero {
+    /* background-color: red; */
+    width: 72%;
+    margin-left: 27%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    /* background-color: red; */
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+.hero:nth-child(2) {
+    margin-top: 18vh;
+}
+
+.hero h1 {
+    font-family: shyam;
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    position: relative;
+}
+
+#hero1::before {
+    content: "01";
+    position: absolute;
+    font-size: 3.5vw;
+    font-weight: 100;
+    font-family: japan;
+    left: 20%;
+    top: 34%;
+}
+
+.hero h2 {
+    font-family: shyam;
+    font-size: 7.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+    border-bottom: 0.5vw solid #fff;
+    /* padding-bottom: 0.8vw;
+    /* transition: all ease 0.3s; */
+
+}
+
+.hero h2:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    font-weight: 500;
+    border-bottom: 0.5vw solid #ffffff00;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+    margin-top: 5vw;
+}
+
+#video-cursor {
+    background-color: #FFA63D;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -13%;
+    left: 70%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-cursor i {
+    font-size: 2.6vw;
+}
+
+#video-container {
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    /* top: 15%; */
+    left: 28%;
+    background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: red;
+}
+
+/* #video-container img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+} */
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(100, 100, 100); */
+    position: relative;
+    padding: 17vh 2vw;
+    margin-bottom: 40vh;
+    margin-top: 20vh;
+}
+#page3 h1 {
+    font-family: shyam;
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 28vw;
+}
+
+#page3 h1::before {
+    content: "02";
+    position: absolute;
+    font-weight: 200;
+    font-size: 3.5vw;
+    font-family: japan;
+    left: -12%;
+    top: 8%;
+}
+#page3 .underline {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    /* margin: 5vw 0; */
+    margin-left: 28vw;
+
+}
+#image-div-container{
+    /* background-color: red; */
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.image-div{
+    height: 38vw;
+    width: 27vw;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 2vw;
+    /* background-color: blue; */
+}
+.image-div:nth-child(1){
+    height: 29vw;
+    width: 21vw;
+}
+.image-div:nth-child(5){
+    margin-top: 9vw;
+}
+.image-div img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    object-fit: contain;
+    /* object-position: center; */
+}
+.page3-circle1{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23vh;
+    margin-left: 10vw;
+}
+.page3-circle1 svg{
+    height: 30%;
+}
+.page3-circle2{
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-in{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;  
+    scale: 0;
+    border-radius: 50%;
+}
+.circle-in p{
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: shyam;
+    /* padding: 1vw; */
+    width: 70%;
+    text-align: start;
+    font-size: 0.8vw;
+    color: black;
+    scale: 0;
+    transition: all ease 0.3s;
+    transition-delay: 0.4s;
+    opacity: 0;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+}
+.page3-circle1:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+}
+.page3-circle2:hover .circle-in p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2 svg{
+    height: 30%;
+    rotate: -45deg;
+}
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: rgb(100, 100, 100); */
+    position: relative;
+    padding-top: 7vh 0;
+}
+
+#page4-content {
+    margin-top: 10vh;
+    width: 72vw;
+    margin-left: 28%;
+}
+
+#page4-content h1 {
+    font-family: shyam;
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#page4-content h1::before {
+    content: "03";
+    position: absolute;
+    font-weight: 200;
+    font-size: 3.5vw;
+    font-family: japan;
+    left: -12%;
+    top: 8%;
+}
+
+#page4-content .underline {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+
+#page4-content p {
+    font-family: shyam;
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+
+#page4-flex {
+    display: flex;
+}
+
+#page4-flex img {
+    width: 48%;
+}
+
+#page4-flex p {
+    font-size: 1vw;
+    width: 20%;
+    margin-left: 1vw;
+}
+
+#page4-blue-div {
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 26vw;
+}
+
+.blue-div-elem {
+    margin-top: 1vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5vw 0;
+    border-bottom: 2px solid #D2E0FD;
+}
+
+.blue-div-elem h4 {
+    font-size: 1.3vw;
+    font-weight: 500;
+    font-family: shyam;
+}
+
+.blue-div-elem h3 {
+    width: 40%;
+    font-size: 1.1vw;
+    font-weight: 150;
+    font-family: shyam;
+}
+
+#page5 {
+    margin-top: 30vh;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.elem {
+    /* background-color: red; */
+    white-space: nowrap;
+    margin-bottom: -1vw;
+}
+
+.elem h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-family: 400;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    color: transparent;
+    margin-right: 16px;
+    transform: translateX(calc(-100% - 24px));
+    animation-name: anime2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.elem span {
+    -webkit-text-stroke: 1px #fff;
+    font-family: japan;
+    font-style: italic;
+    color: transparent;
+}
+
+.elem2 {
+    /* background-color: red; */
+    white-space: nowrap;
+    margin-bottom: -1vw;
+}
+
+.elem2 span {
+    -webkit-text-stroke: 1px #fff;
+    font-style: italic;
+    font-family: japan;
+    color: transparent;
+}
+
+.elem2 h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-family: 400;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    display: inline-block;
+    color: transparent;
+    margin-right: 16px;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: anime2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes anime2 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+#footer {
+    margin-top: 5vh;
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 28vw;
+    padding-right: 2vw;
+    overflow: hidden;
+}
+
+#footer h1 {
+    font-size: 7vw;
+    font-family: shyam;
+    text-transform: uppercase;
+    position: relative;
+}
+.animate{
+    position: relative;
+}
+#footer h1::before {
+    content: "04";
+    position: absolute;
+    font-weight: 200;
+    font-size: 3.5vw;
+    font-family: japan;
+    left: -12%;
+    top: 8%;
+}
+
+
+.animate h2{
+    opacity: 1;
+    /* width: 100%; */
+    position: absolute;
+    top: -15%;
+    left: 0;
+    font-style: italic;
+    font-size: 8vw;
+    font-family: japan;
+    /* -webkit-text-stroke: 1px #fff; */
+    /* font-family: 400; */
+    /* text-transform: uppercase;
+    display: inline-block;
+    color: transparent; */
+}
+.animate h2 span {
+    font-family: japan;
+    opacity: 0;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+/* #footer h2::before {
+    content: "04";
+    position: absolute;
+    font-weight: 200;
+    font-size: 3.5vw;
+    font-family: japan;
+    left: -12%;
+    top: 8%;
+} */
+.underline {
+    opacity: 1;
+    height: 1.5px;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: white;
+    margin: 2vw 0;
+}
+
+#footer-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding: 4vw 0;
+    margin-bottom: 6vw;
+}
+
+#footer-div h6 {
+    font-size: 1vw;
+    font-weight: 500;
+    margin-bottom: 1.5vw;
+    font-family: shyam;
+}
+
+.box {
+    width: 27%;
+}
+
+#footer-div h5 {
+    font-family: shyam;
+    font-size: 1.7vw;
+    line-height: 1.7vw;
+    font-weight: 500;
+    /* margin: 0.2vh 0; */
+}
+
+#footer>h5 {
+    font-family: shyam;
+    font-weight: 500;
+    font-size: 1vw;
+}
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
+}
+#flag{
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+#hero3{
+    /* background-color: red; */
+    z-index: 999;
+    position: relative;
+}
+@media (max-width:600px) {
+    #page1 {
+        min-height:55vh;
+        width: 100%;
+        background-color: #151515;
+        position: relative;
+        z-index: 100;
+        /* background-color: red; */
+        /* z-index: 99999; */
+        padding-top: 1px;
+    }
+    
+    #page1 #nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 4.3vw 5vw;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    #nav svg{
+        scale: 0.8;
+    }
+    #nav #nav-part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+        display: none;
+    }
+    
+    .hero {
+        /* background-color: red; */
+        width: 72%;
+        margin-left: 5%;
+        height: fit-content;
+        /* background-color: red; */
+        overflow-y: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .hero:nth-child(2) {
+        margin-top: 25vh;
+    }
+    
+    .hero h1 {
+        font-family: shyam;
+        font-size: 10vw;
+        font-weight: 0;
+        text-transform: uppercase;
+        line-height: 11vw;
+        position: relative;
+    }
+    
+    #hero1::before {
+        content: "01";
+        position: absolute;
+        font-size: 5vw;
+        font-weight: 100;
+        font-family: japan;
+        left: 7%;
+        top: 32%;
+    }
+    
+    .hero h2 {
+        font-family: shyam;
+        font-size: 10vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 11vw;
+    }
+    
+    #page2 {
+        height: 58vh;
+        width: 100%;
+        padding-top: 5vh;
+        position: relative;
+        margin-top: 15vh;
+        /* background-color: red; */
+    }
+    
+    #video-cursor {
+        background-color: #FFA63D;
+        height: 25vw;
+        width: 25vw;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }
+    
+    #video-cursor i {
+        font-size: 5vw;
+    }
+    
+    #video-container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+        background-size: cover;
+        background-position: center;
+        /* background-color: red; */
+    }
+    
+    #video-container video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+    }
+    #page3 {
+        min-height: 100vh;
+        width: 100%;
+        /* background-color: rgb(100, 100, 100); */
+        position: relative;
+        padding: 10vh 2vw;
+        margin-bottom: 4vh;
+        margin-top: 35vh;
+    }
+    #page3 h1 {
+        font-family: shyam;
+        font-size: 9vw;
+        text-transform: uppercase;
+        position: relative;
+        margin-left: 2vw;
+    }
+    
+    #page3 h1::before {
+        content: "02";
+        position: absolute;
+        font-weight: 200;
+        font-size: 4vw;
+        font-family: japan;
+        left: 3%;
+        top: -50%;
+    }
+    #page3 .underline {
+        height: 1px;
+        width: 96%;
+        background-color: #fff;
+        /* margin: 5vw 0; */
+        margin-left: 2vw;
+        margin-top: 5vh;
+    }
+    #image-div-container{
+        /* background-color: red; */
+        padding: 5vw;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .image-div{
+        height: 60vh;
+        width: 80vw;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        margin: 2vw;
+        /* background-color: blue; */
+    }
+    .image-div:nth-child(1){
+        height: 60vh;
+        width: 80vw;
+    }
+    .image-div:nth-child(5){
+        margin-top: 9vw;
+    }
+    .image-div img{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        object-fit: contain;
+        /* object-position: center; */
+    }
+    .page3-circle1{
+        height: 23vw;
+        width: 23vw;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 23vh;
+        margin-left: 10vw;
+        display: none;
+    }
+    .page3-circle1 svg{
+        height: 30%;
+    }
+    .page3-circle2{
+        height: 23vw;
+        width: 23vw;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    #page4 {
+        min-height: 100vh;
+        width: 100%;
+        /* background-color: rgb(100, 100, 100); */
+        position: relative;
+        padding: 7vh 2vh;
+        margin-top: 50vh;
+    }
+    
+    #page4-content {
+        margin-top: 10vh;
+        width: 72vw;
+        margin-left: 0%;
+    }
+    
+    #page4-content h1 {
+        font-family: shyam;
+        font-size: 10vw;
+        text-transform: uppercase;
+        position: relative;
+    }
+    
+    #page4-content h1::before {
+        content: "03";
+        position: absolute;
+        font-weight: 200;
+        font-size: 5.5vw;
+        font-family: japan;
+        left: 0%;
+        top: -75%;
+    }
+    
+    #page4-content .underline {
+        height: 1px;
+        width: 120%;
+        background-color: #fff;
+        margin: 7vw 0;
+    }
+    
+    #page4-content p {
+        margin-top: 3vh;
+        font-family: shyam;
+        font-size: 5.5vw;
+        width: 120%;
+        margin-bottom: 3vw;
+    }
+    
+    #page4-flex {
+        display: inline-flex;
+        position: relative;
+    }
+    
+    #page4-flex img {
+        margin-top: 84%;
+        width: 120%;
+    }
+    
+    #page4-flex p {
+        position: absolute;
+        padding-top: 1vh;
+        font-size: 3.7vw;
+        line-height: 5vw;
+        width: 130%;
+        margin-left: 1vw;
+    }
+    
+    #page4-blue-div {
+        background-color: #3F7DF4;
+        height: 68vh;
+        width: 87vw;
+        padding: 3vw;
+        position: relative;
+        margin-top: 0vh;
+        margin-left: 0vw;
+    }
+    
+    .blue-div-elem {
+        margin-top: 2vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 6vw 2vw;
+        border-bottom: 2px solid #D2E0FD;
+    }
+    
+    .blue-div-elem h4 {
+        font-size: 4vw;
+        font-weight: 500;
+        font-family: shyam;
+    }
+    
+    .blue-div-elem h3 {
+        width: 40%;
+        font-size: 3.5vw;
+        font-weight: 150;
+        font-family: shyam;
+    }
+    #page5 {
+        margin-top: 30vh;
+        min-height: 60vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #footer {
+        margin-top: 0vh;
+        min-height: 100vh;
+        width: 100%;
+        /* background-color: red; */
+        position: relative;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        overflow: visible;
+    }
+    
+    #footer h1 {
+        width: fit-content;
+        font-size: 7vw;
+        font-family: shyam;
+        text-transform: uppercase;
+        position: relative;
+    }
+    .animate{
+        position: relative;
+    }
+    #footer h1::before {
+        content: "04";
+        position: absolute;
+        font-weight: 200;
+        font-size: 30vw;
+        font-family: japan;
+        left: 1%;
+        top: -380%;
+        display: none;
+    }
+    
+    
+    .animate h2{
+        opacity: 1;
+        /* width: 100%; */
+        position: absolute;
+        top: -15%;
+        left: 0;
+        font-style: italic;
+        font-size: 8vw;
+        font-family: japan;
+        /* -webkit-text-stroke: 1px #fff; */
+        /* font-family: 400; */
+        /* text-transform: uppercase;
+        display: inline-block;
+        color: transparent; */
+    }
+    .animate h2 span {
+        font-family: japan;
+        opacity: 0;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+    }
+    /* #footer h2::before {
+        content: "04";
+        position: absolute;
+        font-weight: 200;
+        font-size: 3.5vw;
+        font-family: japan;
+        left: -12%;
+        top: 8%;
+    } */
+    .underline {
+        opacity: 1;
+        height: 1.5px;
+        width: 100%;
+        text-transform: uppercase;
+        background-color: white;
+        margin: 10vw 0;
+    }
+    
+    #footer-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 5vh;
+        padding-right: 15vw;
+        padding: 4vw 0;
+        margin-bottom: 6vw;
+    }
+    
+    #footer-div h6 {
+        font-size: 5vw;
+        font-weight: 500;
+        margin-bottom: 5vw;
+        font-family: shyam;
+    }
+    
+    .box {
+        width: 27%;
+    }
+    
+    #footer-div h5 {
+        width: 100%;
+        font-family: shyam;
+        white-space: nowrap;
+        font-size: 6vw;
+        line-height: 1.7vw;
+        font-weight: 500;
+        line-height: 7.5vw;
+        /* margin: 0.2vh 0; */
+    }
+    
+    #footer>h5 {
+        font-family: shyam;
+        font-weight: 500;
+        font-size: 5vw;
+    }
+    
+}
